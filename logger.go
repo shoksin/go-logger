@@ -37,7 +37,7 @@ func InitLogger(cfg Config) error {
 
 	encoderCfg := zap.NewProductionEncoderConfig()
 	encoderCfg.EncodeTime = zapcore.ISO8601TimeEncoder
-	encoderCfg.EncodeLevel = zapcore.CapitalColorLevelEncoder
+	encoderCfg.EncodeLevel = zapcore.CapitalLevelEncoder
 
 	var encoder zapcore.Encoder
 	if cfg.JSONFormat {
